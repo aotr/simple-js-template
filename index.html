@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test template eng</title>
+</head>
+<body>
+	<span id="testId"></span>
+</body>
+</html>
+<script src="template.aotr.js"></script>
+<script type="text/javascript">
+
+
+var template = '<p>Hello, my name is <%name%>. I\'m <%age%> years old.</p><p><%company.name%></p>';
+
+document.write(TemplateEngine(template, {
+    name: "Tuhin",
+    age: 25,
+    company : 'TCS'
+}));
+document.write(TemplateEngineNew(template, {
+    name: "Tuhin",
+    age: 25,
+    company : {
+    	name :'TCS'
+    }
+}));
+	
+</script>
