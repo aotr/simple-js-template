@@ -1,14 +1,4 @@
-var TemplateEngine = function(tpl, data) {
-	var re = /<%([^%>]+)?%>/g, match;
-    
-    while(match = re.exec(tpl)) {
-        tpl = tpl.replace(match[0], data[match[1]])
-    }
-	
-	return tpl;
-
-}
-var TemplateEngineNew = function(html, options) {
+var TemplateEngine = function(html, options) {
 	var re = /<%(.+?)%>/g, 
 		reExp = /(^( )?(var|if|for|else|switch|case|break|{|}|;))(.*)?/g, 
 		code = 'with(obj) { var r=[];\n', 
