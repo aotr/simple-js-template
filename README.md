@@ -13,23 +13,14 @@ var templateUse =
 'have to learn this Year :' +
 
 '<%if(this.showLearn) {%>' +
-
-    '<%for(var index in this.learn) {%>' + 
-    
-    '<a href="#"><%this.learn[index]%></a>' +
-    
-    '<%}%>' +
-    
+'<%for(var index in this.learn) {%>' + 
+'<a href="#"><%this.learn[index]%></a>' +
+'<%}%>' +
 '<%} else {%>' +
-
-    '<p>none</p>' +
-
+'<p>none</p>' +
 '<%}%>';
 
 console.log(TemplateEngine(template, {
-
-    learn: ["js", "html", "css"],
-    
-    showLearn: true
-    
+learn: ["js", "html", "css"],
+showLearn: true
 }));
