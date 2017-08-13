@@ -21,7 +21,7 @@ var templateUse =
 '<%}%>';
 
 console.log(TemplateEngine(template, {
-learn: ["js", "html", "css"],
+learn: ["go", "html", "css","python","jQuery","c++"],
 showLearn: true
 }));
 ```
