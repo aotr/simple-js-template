@@ -20,7 +20,7 @@ var templateUse =
 '<p>none</p>' +
 '<%}%>';
 
-console.log(TemplateEngine(template, {
+console.log(TemplateEngine(templateUse, {
 learn: ["go", "html", "css","python","jQuery","c++"],
 showLearn: true
 }));
