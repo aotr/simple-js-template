@@ -1,11 +1,13 @@
 var TemplateEngine = function(html, options) {
-	var re = /<%(.+?)%>/g, 
+	var 
+	        //replacement tag define
+	        re = /<%(.+?)%>/g, 
 		reExp = /(^( )?(var|if|for|else|switch|case|break|{|}|;))(.*)?/g, 
 		code = 'with(obj) { var r=[];\n', 
 		cursor = 0, 
 		result,
 	    	match;
-
+	//add function create templte raw html
 	var add = function(line, js) {
 		js? (code += line.match(reExp) ? line + '\n' : 'r.push(' + line + ');\n') :
 			(code += line != '' ? 'r.push("' + line.replace(/"/g, '\\"') + '");\n' : '');
