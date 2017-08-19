@@ -1,13 +1,14 @@
-# simple-js-template
+# Simple-js-Template
 
 
-Javascript based template. No new language, no new syntax. Write everything in plain JavaScript.
-Make only HTML page with {%variable_name%} is replace by value (template.aotr.old.js or template.aotr.js) .
- template.aotr.old.js is base uses .
+A JavaScript based template.
 
-template.aotr.js is advanced use working with the object with loop and if else other functionality.
+Nothing new,write everything in plain JavaScript.
+Just make a HTML page with {%variable_name%},which is replacable by the value (template.aotr.old.js or template.aotr.js).
 
-### Some uses of template.aotr.js
+The template.aotr.old.js is for amaetuer users while the template.aotr.js is for advanced users working with object,loop, if else and other functionality.
+
+### Sample code snippets to know how template.aotr.js works
 ```
 var templateUse = 
 'have to learn this Year :' +
