@@ -8,32 +8,29 @@
 	<span id="testId"></span>
 </body>
 </html>
-<script src="..\template.aotr.js"></script>
+<script src="..\dist\template.aotr.min.js"></script>
 <script type="text/template" id="temp1">
     <p>
         Hello, my name is <%name%>. I\'m <%age%> years old.
     </p>
-    <p>
-        <%company.name%>
-    </p>
+    
 </script>
 
 <script type="text/javascript">
 
-var template = '<p>Hello, my name is <%name%>. I\'m <%age%> years old.</p><p><%company.name%></p>';
+var templateFromVariable = '<p>Hello, my name is <%name%>. I\'m <%age%> years old.</p>';
 
-document.write(TemplateEngine(template, {
+document.write(TemplateEngine(templateFromVariable, {
     name: "Tuhin",
-    age: 25,
-    company : 'TCS'
+    age: 25
 }));
 
-template = document.getElementById("temp1").innerText;
-document.write(TemplateEngine(template, {
-    name: "Tuhin",
-    age: 25,
-    company : 'TCS'
-}));
+templateFromScript = document.getElementById("temp1").innerText;
+
+document.getElementById("testId").innerHTML = TemplateEngine(templateFromScript, {
+    name: "Animesh",
+    age: 27
+});
 
 
 
