@@ -8,9 +8,17 @@
 	<span id="testId"></span>
 </body>
 </html>
-<script src="template.aotr.js"></script>
-<script type="text/javascript">
+<script src="..\template.aotr.js"></script>
+<script type="text/template" id="temp1">
+    <p>
+        Hello, my name is <%name%>. I\'m <%age%> years old.
+    </p>
+    <p>
+        <%company.name%>
+    </p>
+</script>
 
+<script type="text/javascript">
 
 var template = '<p>Hello, my name is <%name%>. I\'m <%age%> years old.</p><p><%company.name%></p>';
 
@@ -19,12 +27,14 @@ document.write(TemplateEngine(template, {
     age: 25,
     company : 'TCS'
 }));
-document.write(TemplateEngineNew(template, {
+
+template = document.getElementById("temp1").innerText;
+document.write(TemplateEngine(template, {
     name: "Tuhin",
     age: 25,
-    company : {
-    	name :'TCS'
-    }
+    company : 'TCS'
 }));
-	
+
+
+
 </script>
